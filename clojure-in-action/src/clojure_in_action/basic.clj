@@ -3,12 +3,6 @@
 (println "Hello, world!")
 
 
-<<<<<<< HEAD
-=======
-(println "Hello, world!")
-
-
->>>>>>> 678f67c53c4fe07344d13fd8e161973a7f50fa2e
 ;; REPL Who?
 ;; The REPL is one of the few programs whose name is its algorithm.
 ;; All the REPL does is read some code—the code you type in—eval-
@@ -65,13 +59,8 @@
   (println "chatty-average function called")
   (println "** first argument:" a)
   (println "** second argument:" b)
-<<<<<<< HEAD
   (/ (+ a b) 2.0))
 (chatty-average 10 20)
-=======
-  (/ (+ a b) 2.0)) 
-(chatty-average 10 20) 
->>>>>>> 678f67c53c4fe07344d13fd8e161973a7f50fa2e
 ;** first argument: 10
 ;** second argument: 20
 ;15.0
@@ -87,7 +76,3 @@
 ;; predefinition of a function.
 ;; Mostly Clojurists stick to defining their functions before they use
 ;; them, and reserve declare for sticky situations like mutually recursive functions.
-<<<<<<< HEAD
-=======
-
->>>>>>> 678f67c53c4fe07344d13fd8e161973a7f50fa2e

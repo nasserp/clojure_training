@@ -3,8 +3,6 @@
 
 
 ;; ***multi-arity function***
-
-functions
 (defn greet
   ([to-whom] (println "Welcome to Blotts Books" to-whom)) ;;Welcome to Blotts Books param1
   ([message to-whom] (println message to-whom))) ;; param1 param2
@@ -236,9 +234,9 @@ functions
   (println "My arguments are:" args))
 (print-any-args 2 3)
 
-(defn print-any-args [&args]
-  (println "My arguments are:" args))
-(print-any-args 2) ;; Syntax error compiling...Unable to resolve symbol: args in this context
+;; (defn print-any-args [&args]
+;;   (println "My arguments are:" args))
+;; (print-any-args 2) ---->Result: Syntax error compiling...Unable to resolve symbol: args in this context
 
 
 
