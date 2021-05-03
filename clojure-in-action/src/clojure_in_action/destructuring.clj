@@ -169,6 +169,11 @@
 
 (add-greeting {:name "naser" :age 36 :additional "additional"}) ;{:name "naser", :age 36, :greeting "Hello, my name is naser and I am 36."}
 
+;Destructuring can use with function parameters and let, you can’t use destructuring directly in a def. So this:
+(def author {:name "Jane Austen" :born 1775})
+(def author-name [{n :name} author]) ; Syntax error compiling
+(def author-name ;It's OK
+  (let [{n :name} author] n))
 
 
 
