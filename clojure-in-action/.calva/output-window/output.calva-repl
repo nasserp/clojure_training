@@ -14,37 +14,341 @@
 ;   - `alt+up` and `alt+down` traverse up and down the REPL command history
 ;      when the cursor is after the last contents at the prompt
 ;   - Clojure lines in stack traces are peekable and clickable.
-clj꞉user꞉> 
-(rest [])
-()
-clj꞉user꞉> 
-()
-clj꞉clojure-in-action.vectors-and-lists꞉> 
+clj꞉clojure-in-action.core꞉>  ; Use `alt+enter` to evaluate
+; Syntax error compiling at (src/clojure_in_action/spec.clj:104:1).
+; No such namespace: s
+clj꞉clojure-in-action.spec꞉> 
+Success!
+1 - failed: (> % 10)
+; Unexpected error (AssertionError) macroexpanding s/keys at (src/clojure_in_action/spec.clj:62:3).
+; Assert failed: all keys must be namespace-qualified keywords
+(every? (fn* [p1__1917#] (c/and (keyword? p1__1917#) (namespace p1__1917#))) (concat req-keys req-un-specs opt opt-un))
+; Execution error (IllegalStateException) at clojure-in-action.spec/eval2089 (form-init4313397792528964358.clj:65).
+; Attempting to call unbound fn: #'clojure-in-action.spec/book-s
+clj꞉clojure-in-action.spec꞉> 
+false
+clj꞉clojure-in-action.spec꞉> 
+Success!
+nil
+clj꞉clojure-in-action.spec꞉> 
+1 - failed: (> % 10)
+nil
+clj꞉clojure-in-action.spec꞉> 
+{:s1 "Emma", :n1 1815, :s2 "Jaws", :n2 1974}
+clj꞉clojure-in-action.spec꞉> 
+1968
+clj꞉clojure-in-action.spec꞉> 
+:austen - failed: string? in: [:author] at: [:author] spec: :clojure-in-action.spec/author
+:emma - failed: string? in: [:title] at: [:title] spec: :clojure-in-action.spec/title
+{:author :austen, :title :emma} - failed: (contains? % :copies) spec: :clojure-in-action.spec/book
+nil
+clj꞉clojure-in-action.spec꞉> 
+:clojure.spec.alpha/invalid
+clj꞉clojure-in-action.spec꞉> 
+{:s1 "Emma", :n1 1815, :s2 "Jaws", :n2 1974}
+clj꞉clojure-in-action.spec꞉> 
+Success!
+nil
+clj꞉clojure-in-action.spec꞉> 
+:clojure.spec.alpha/invalid
+clj꞉clojure-in-action.spec꞉> 
+:inventory.core/inventory
+clj꞉clojure-in-action.spec꞉> 
+; Syntax error compiling at (src/clojure_in_action/spec.clj:138:1).
+; Unable to resolve symbol: find-by-title in this context
+clj꞉clojure-in-action.spec꞉> 
+#'clojure-in-action.spec/books
+clj꞉clojure-in-action.spec꞉> 
+#'clojure-in-action.spec/find-by-title
+clj꞉clojure-in-action.spec꞉> 
+; Execution error at clojure-in-action.spec/find-by-title (form-init4313397792528964358.clj:135).
+; Unable to resolve spec: :clojure-in-action.spec/inventory
+clj꞉clojure-in-action.spec꞉> 
+:clojure-in-action.spec/inventory
+clj꞉clojure-in-action.spec꞉> 
+#'clojure-in-action.spec/find-by-title
+clj꞉clojure-in-action.spec꞉> 
+{:title "2001", :author "Clarke", :copies 21}
+clj꞉clojure-in-action.spec꞉> 
+#'clojure-in-action.spec/books
+clj꞉clojure-in-action.spec꞉> 
+#'clojure-in-action.spec/find-by-title
+clj꞉clojure-in-action.spec꞉> 
+; Execution error (AssertionError) at clojure-in-action.spec/find-by-title (form-init4313397792528964358.clj:128).
+; Assert failed: (s/valid? :clojure-in-action.spec/book inventory)
+clj꞉clojure-in-action.spec꞉> 
+#'clojure-in-action.spec/books
+clj꞉clojure-in-action.spec꞉> 
+#'clojure-in-action.spec/find-by-title
+clj꞉clojure-in-action.spec꞉> 
+; Execution error (AssertionError) at clojure-in-action.spec/find-by-title (form-init4313397792528964358.clj:128).
+; Assert failed: (s/valid? :clojure-in-action.spec/book books)
+clj꞉clojure-in-action.spec꞉> 
+{:title "2001", :author "Clarke", :copies 21}
+clj꞉clojure-in-action.spec꞉> 
+nil
+clj꞉clojure-in-action.spec꞉> 
+; Execution error (AssertionError) at clojure-in-action.spec/find-by-title (form-init4313397792528964358.clj:132).
+; Assert failed: (s/valid? :clojure-in-action.spec/title title)
+clj꞉clojure-in-action.spec꞉> 
+#'clojure-in-action.spec/find-by-title
+clj꞉clojure-in-action.spec꞉> 
+clojure-in-action.spec/find-by-title
+clj꞉clojure-in-action.spec꞉> 
+nil
+clj꞉clojure-in-action.spec꞉> 
+clojure-in-action.spec/find-by-title
+clj꞉clojure-in-action.spec꞉> 
+nil
+clj꞉clojure-in-action.spec꞉> 
+; Execution error (IllegalArgumentException) at clojure-in-action.spec/eval5933 (form-init4313397792528964358.clj:152).
+; Don't know how to create ISeq from: clojure.lang.Keyword
+clj꞉clojure-in-action.spec꞉> 
+nil
+clj꞉clojure-in-action.spec꞉> 
+; Execution error (IllegalArgumentException) at clojure-in-action.spec/eval6017 (form-init4313397792528964358.clj:152).
+; Don't know how to create ISeq from: clojure.lang.Keyword
+clj꞉clojure-in-action.spec꞉> 
 []
-clj꞉clojure-in-action.vectors-and-lists꞉> 
-; Syntax error compiling at (clojure-in-action/src/clojure_in_action/vectors-and-lists.clj:34:1).
-; Unable to resolve symbol: novels in this context
-clj꞉clojure-in-action.vectors-and-lists꞉> 
-; Execution error (ClassCastException) at clojure-in-action.vectors-and-lists/eval2395 (REPL:34).
-; class java.lang.String cannot be cast to class clojure.lang.IPersistentCollection (java.lang.String is in module java.base of loader 'bootstrap'; clojure.lang.IPersistentCollection is in unnamed module of loader 'bootstrap')
-clj꞉clojure-in-action.vectors-and-lists꞉> 
-["novels" "Carrie"]
-clj꞉clojure-in-action.vectors-and-lists꞉> 
-("Carrie" "novels" "Carrie")
-clj꞉clojure-in-action.vectors-and-lists꞉> 
-["novels" "Carrie"]
-clj꞉clojure-in-action.vectors-and-lists꞉> 
-("Carrie" "novels")
-clj꞉clojure-in-action.vectors-and-lists꞉> 
-["novels" "Carrie"]
-clj꞉clojure-in-action.vectors-and-lists꞉> 
-("Carrie" "novels")
-clj꞉clojure-i0ectors-and-lists꞉> 
-(1 2 3 "four" 5 "six")
-clj꞉clojure-in-action.vectors-and-lists꞉> 
-("Jabberwocky" "Iliad" "Odyssey" "Now We Are Six")
-clj꞉clojure-in-action.vectors-and-lists꞉> 
-{"title" "Oliver Twist", "author" "Dickens", "published" 1838}
-clj꞉clojure-in-action.maps-keywords-sets꞉> 
-{"author" "Dickens", "published" 1838, "title" "Oliver Twist"}
-clj꞉clojure-in-action.maps-keywords-sets꞉> 
+clj꞉clojure-in-action.spec꞉> 
+; Execution error (IllegalArgumentException) at clojure-in-action.spec/eval6111 (form-init4313397792528964358.clj:152).
+; Don't know how to create ISeq from: clojure_in_action.spec$find_by_title
+clj꞉clojure-in-action.spec꞉> 
+[]
+clj꞉clojure-in-action.spec꞉> 
+[]
+clj꞉clojure-in-action.spec꞉> 
+nil
+clj꞉clojure-in-action.spec꞉> 
+nil
+clj꞉clojure-in-action.spec꞉> 
+[]
+clj꞉clojure-in-action.spec꞉> 
+nil
+clj꞉clojure-in-action.spec꞉> 
+nil
+clj꞉clojure-in-action.spec꞉> 
+[clojure-in-action.spec/find-by-title]
+clj꞉clojure-in-action.spec꞉> 
+[clojure-in-action.spec/find-by-title]
+clj꞉clojure-in-action.spec꞉> 
+; Execution error - invalid arguments to clojure-in-action.spec/find-by-title at (form-init4313397792528964358.clj:155).
+; 2001 - failed: string? at: [:my-kw-title] spec: :clojure-in-action.spec/title
+clj꞉clojure-in-action.spec꞉> 
+; Execution error - invalid arguments to clojure-in-action.spec/find-by-title at (form-init4313397792528964358.clj:156).
+; 2001 - failed: string? at: [:my-kw-title] spec: :clojure-in-action.spec/title
+clj꞉clojure-in-action.spec꞉> 
+; Syntax error compiling at (src/clojure_in_action/spec.clj:172:1).
+; Unable to resolve symbol: book-blurb in this context
+clj꞉clojure-in-action.spec꞉> 
+; Evaluating file: spec.clj
+; Unexpected error (AssertionError) macroexpanding s/keys at (src/clojure_in_action/spec.clj:62:3).
+; Assert failed: all keys must be namespace-qualified keywords
+(every? (fn* [p1__1917#] (c/and (keyword? p1__1917#) (namespace p1__1917#))) (concat req-keys req-un-specs opt opt-un))
+; Evaluation of file spec.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉clojure-in-action.spec꞉> 
+clj꞉clojure-in-action.spec꞉> 
+({:spec #object[clojure.spec.alpha$fspec_impl$reify__2524 0x30a10483 "clojure.spec.alpha$fspec_impl$reify__2524@30a10483"], :clojure.spec.test.check/ret {:result #error {
+ :cause "Could not locate clojure/test/check/generators__init.class, clojure/test/check/generators.clj or clojure/test/check/generators.cljc on classpath."
+ :via
+ [{:type java.io.FileNotFoundException
+   :message "Could not locate clojure/test/check/generators__init.class, clojure/test/check/generators.clj or clojure/test/check/generators.cljc on classpath."
+   :at [clojure.lang.RT load "RT.java" 462]}]
+ :trace
+ [[clojure.lang.RT load "RT.java" 462]
+  [clojure.lang.RT load "RT.java" 424]
+  [clojure.core$load$fn__6839 invoke "core.clj" 6126]
+  [clojure.core$load invokeStatic "core.clj" 6125]
+  [clojure.core$load doInvoke "core.clj" 6109]
+  [clojure.lang.RestFn invoke "RestFn.java" 408]
+  [clojure.core$load_one invokeStatic "core.clj" 5908]
+  [clojure.core$load_one invoke "core.clj" 5903]
+  [clojure.core$load_lib$fn__6780 invoke "core.clj" 5948]
+  [clojure.core$load_lib invokeStatic "core.clj" 5947]
+  [clojure.core$load_lib doInvoke "core.clj" 5928]
+  [clojure.lang.RestFn applyTo "RestFn.java" 142]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$load_libs invokeStatic "core.clj" 5985]
+  [clojure.core$load_libs doInvoke "core.clj" 5969]
+  [clojure.lang.RestFn applyTo "RestFn.java" 137]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$require invokeStatic "core.clj" 6007]
+  [clojure.core$require doInvoke "core.clj" 6007]
+  [clojure.lang.RestFn invoke "RestFn.java" 408]
+  [clojure.spec.gen.alpha$dynaload$fn__2628 invoke "alpha.clj" 22]
+  [clojure.spec.gen.alpha$dynaload invokeStatic "alpha.clj" 21]
+  [clojure.spec.gen.alpha$dynaload invoke "alpha.clj" 17]
+  [clojure.spec.gen.alpha$fn__2919$fn__2920 invoke "alpha.clj" 118]
+  [clojure.lang.Delay deref "Delay.java" 42]
+  [clojure.core$deref invokeStatic "core.clj" 2320]
+  [clojure.core$deref invoke "core.clj" 2306]
+  [clojure.spec.gen.alpha$fn__2919$simple_type_printable__2922 doInvoke "alpha.clj" 118]
+  [clojure.lang.RestFn invoke "RestFn.java" 397]
+  [clojure.spec.gen.alpha$fn__2976 invokeStatic "alpha.clj" 134]
+  [clojure.spec.gen.alpha$fn__2976 invoke "alpha.clj" 133]
+  [clojure.lang.Delay deref "Delay.java" 42]
+  [clojure.core$deref invokeStatic "core.clj" 2320]
+  [clojure.core$deref invoke "core.clj" 2306]
+  [clojure.spec.gen.alpha$gen_for_pred invokeStatic "alpha.clj" 195]
+  [clojure.spec.gen.alpha$gen_for_pred invoke "alpha.clj" 190]
+  [clojure.spec.alpha$spec_impl$reify__2059 gen_STAR_ "alpha.clj" 937]
+  [clojure.spec.alpha$gensub invokeStatic "alpha.clj" 279]
+  [clojure.spec.alpha$gensub invoke "alpha.clj" 272]
+  [clojure.spec.alpha$map_spec_impl$reify__1997$rgen__2038 invoke "alpha.clj" 877]
+  [clojure.core$map$fn__5870 invoke "core.clj" 2760]
+  [clojure.lang.LazySeq sval "LazySeq.java" 42]
+  [clojure.lang.LazySeq seq "LazySeq.java" 51]
+  [clojure.lang.RT seq "RT.java" 535]
+  [clojure.core$seq__5402 invokeStatic "core.clj" 137]
+  [clojure.core$map$fn__5866 invoke "core.clj" 2746]
+  [clojure.lang.LazySeq sval "LazySeq.java" 42]
+  [clojure.lang.LazySeq seq "LazySeq.java" 51]
+  [clojure.lang.RT seq "RT.java" 535]
+  [clojure.core$seq__5402 invokeStatic "core.clj" 137]
+  [clojure.core$concat$fn__5493 invoke "core.clj" 725]
+  [clojure.lang.LazySeq sval "LazySeq.java" 42]
+  [clojure.lang.LazySeq seq "LazySeq.java" 51]
+  [clojure.lang.RT seq "RT.java" 535]
+  [clojure.core$seq__5402 invokeStatic "core.clj" 137]
+  [clojure.core$every_QMARK_ invokeStatic "core.clj" 2679]
+  [clojure.core$every_QMARK_ invoke "core.clj" 2672]
+  [clojure.spec.alpha$map_spec_impl$reify__1997 gen_STAR_ "alpha.clj" 883]
+  [clojure.spec.alpha$gensub invokeStatic "alpha.clj" 279]
+  [clojure.spec.alpha$gensub invoke "alpha.clj" 272]
+  [clojure.spec.alpha$re_gen invokeStatic "alpha.clj" 1638]
+  [clojure.spec.alpha$re_gen invoke "alpha.clj" 1612]
+  [clojure.spec.alpha$re_gen$ggens__2463$gen__2464 invoke "alpha.clj" 1623]
+  [clojure.core$map$fn__5873 invoke "core.clj" 2766]
+  [clojure.lang.LazySeq sval "LazySeq.java" 42]
+  [clojure.lang.LazySeq seq "LazySeq.java" 51]
+  [clojure.lang.RT seq "RT.java" 535]
+  [clojure.core$seq__5402 invokeStatic "core.clj" 137]
+  [clojure.core$every_QMARK_ invokeStatic "core.clj" 2679]
+  [clojure.core$every_QMARK_ invoke "core.clj" 2672]
+  [clojure.spec.alpha$re_gen invokeStatic "alpha.clj" 1642]
+  [clojure.spec.alpha$re_gen invoke "alpha.clj" 1612]
+  [clojure.spec.alpha$regex_spec_impl$reify__2509 gen_STAR_ "alpha.clj" 1713]
+  [clojure.spec.alpha$gensub invokeStatic "alpha.clj" 279]
+  [clojure.spec.alpha$gensub invoke "alpha.clj" 272]
+  [clojure.spec.alpha$gen invokeStatic "alpha.clj" 296]
+  [clojure.spec.alpha$gen invoke "alpha.clj" 285]
+  [clojure.spec.test.alpha$quick_check$fn__3067 invoke "alpha.clj" 306]
+  [clojure.spec.test.alpha$quick_check invokeStatic "alpha.clj" 306]
+  [clojure.spec.test.alpha$quick_check invoke "alpha.clj" 303]
+  [clojure.spec.test.alpha$check_1 invokeStatic "alpha.clj" 336]
+  [clojure.spec.test.alpha$check_1 invoke "alpha.clj" 324]
+  [clojure.spec.test.alpha$check$fn__3088 invoke "alpha.clj" 412]
+  [clojure.core$pmap$fn__8462$fn__8463 invoke "core.clj" 7022]
+  [clojure.core$binding_conveyor_fn$fn__5754 invoke "core.clj" 2030]
+  [clojure.lang.AFn call "AFn.java" 18]
+  [java.util.concurrent.FutureTask run "FutureTask.java" 264]
+  [java.util.concurrent.ThreadPoolExecutor runWorker "ThreadPoolExecutor.java" 1128]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run "ThreadPoolExecutor.java" 628]
+  [java.lang.Thread run "Thread.java" 829]]}}, :sym clojure-in-action.spec/book-blurb, :failure #error {
+ :cause "Could not locate clojure/test/check/generators__init.class, clojure/test/check/generators.clj or clojure/test/check/generators.cljc on classpath."
+ :via
+ [{:type java.io.FileNotFoundException
+   :message "Could not locate clojure/test/check/generators__init.class, clojure/test/check/generators.clj or clojure/test/check/generators.cljc on classpath."
+   :at [clojure.lang.RT load "RT.java" 462]}]
+ :trace
+ [[clojure.lang.RT load "RT.java" 462]
+  [clojure.lang.RT load "RT.java" 424]
+  [clojure.core$load$fn__6839 invoke "core.clj" 6126]
+  [clojure.core$load invokeStatic "core.clj" 6125]
+  [clojure.core$load doInvoke "core.clj" 6109]
+  [clojure.lang.RestFn invoke "RestFn.java" 408]
+  [clojure.core$load_one invokeStatic "core.clj" 5908]
+  [clojure.core$load_one invoke "core.clj" 5903]
+  [clojure.core$load_lib$fn__6780 invoke "core.clj" 5948]
+  [clojure.core$load_lib invokeStatic "core.clj" 5947]
+  [clojure.core$load_lib doInvoke "core.clj" 5928]
+  [clojure.lang.RestFn applyTo "RestFn.java" 142]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$load_libs invokeStatic "core.clj" 5985]
+  [clojure.core$load_libs doInvoke "core.clj" 5969]
+  [clojure.lang.RestFn applyTo "RestFn.java" 137]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$require invokeStatic "core.clj" 6007]
+  [clojure.core$require doInvoke "core.clj" 6007]
+  [clojure.lang.RestFn invoke "RestFn.java" 408]
+  [clojure.spec.gen.alpha$dynaload$fn__2628 invoke "alpha.clj" 22]
+  [clojure.spec.gen.alpha$dynaload invokeStatic "alpha.clj" 21]
+  [clojure.spec.gen.alpha$dynaload invoke "alpha.clj" 17]
+  [clojure.spec.gen.alpha$fn__2919$fn__2920 invoke "alpha.clj" 118]
+  [clojure.lang.Delay deref "Delay.java" 42]
+  [clojure.core$deref invokeStatic "core.clj" 2320]
+  [clojure.core$deref invoke "core.clj" 2306]
+  [clojure.spec.gen.alpha$fn__2919$simple_type_printable__2922 doInvoke "alpha.clj" 118]
+  [clojure.lang.RestFn invoke "RestFn.java" 397]
+  [clojure.spec.gen.alpha$fn__2976 invokeStatic "alpha.clj" 134]
+  [clojure.spec.gen.alpha$fn__2976 invoke "alpha.clj" 133]
+  [clojure.lang.Delay deref "Delay.java" 42]
+  [clojure.core$deref invokeStatic "core.clj" 2320]
+  [clojure.core$deref invoke "core.clj" 2306]
+  [clojure.spec.gen.alpha$gen_for_pred invokeStatic "alpha.clj" 195]
+  [clojure.spec.gen.alpha$gen_for_pred invoke "alpha.clj" 190]
+  [clojure.spec.alpha$spec_impl$reify__2059 gen_STAR_ "alpha.clj" 937]
+  [clojure.spec.alpha$gensub invokeStatic "alpha.clj" 279]
+  [clojure.spec.alpha$gensub invoke "alpha.clj" 272]
+  [clojure.spec.alpha$map_spec_impl$reify__1997$rgen__2038 invoke "alpha.clj" 877]
+  [clojure.core$map$fn__5870 invoke "core.clj" 2760]
+  [clojure.lang.LazySeq sval "LazySeq.java" 42]
+  [clojure.lang.LazySeq seq "LazySeq.java" 51]
+  [clojure.lang.RT seq "RT.java" 535]
+  [clojure.core$seq__5402 invokeStatic "core.clj" 137]
+  [clojure.core$map$fn__5866 invoke "core.clj" 2746]
+  [clojure.lang.LazySeq sval "LazySeq.java" 42]
+  [clojure.lang.LazySeq seq "LazySeq.java" 51]
+  [clojure.lang.RT seq "RT.java" 535]
+  [clojure.core$seq__5402 invokeStatic "core.clj" 137]
+  [clojure.core$concat$fn__5493 invoke "core.clj" 725]
+  [clojure.lang.LazySeq sval "LazySeq.java" 42]
+  [clojure.lang.LazySeq seq "LazySeq.java" 51]
+  [clojure.lang.RT seq "RT.java" 535]
+  [clojure.core$seq__5402 invokeStatic "core.clj" 137]
+  [clojure.core$every_QMARK_ invokeStatic "core.clj" 2679]
+  [clojure.core$every_QMARK_ invoke "core.clj" 2672]
+  [clojure.spec.alpha$map_spec_impl$reify__1997 gen_STAR_ "alpha.clj" 883]
+  [clojure.spec.alpha$gensub invokeStatic "alpha.clj" 279]
+  [clojure.spec.alpha$gensub invoke "alpha.clj" 272]
+  [clojure.spec.alpha$re_gen invokeStatic "alpha.clj" 1638]
+  [clojure.spec.alpha$re_gen invoke "alpha.clj" 1612]
+  [clojure.spec.alpha$re_gen$ggens__2463$gen__2464 invoke "alpha.clj" 1623]
+  [clojure.core$map$fn__5873 invoke "core.clj" 2766]
+  [clojure.lang.LazySeq sval "LazySeq.java" 42]
+  [clojure.lang.LazySeq seq "LazySeq.java" 51]
+  [clojure.lang.RT seq "RT.java" 535]
+  [clojure.core$seq__5402 invokeStatic "core.clj" 137]
+  [clojure.core$every_QMARK_ invokeStatic "core.clj" 2679]
+  [clojure.core$every_QMARK_ invoke "core.clj" 2672]
+  [clojure.spec.alpha$re_gen invokeStatic "alpha.clj" 1642]
+  [clojure.spec.alpha$re_gen invoke "alpha.clj" 1612]
+  [clojure.spec.alpha$regex_spec_impl$reify__2509 gen_STAR_ "alpha.clj" 1713]
+  [clojure.spec.alpha$gensub invokeStatic "alpha.clj" 279]
+  [clojure.spec.alpha$gensub invoke "alpha.clj" 272]
+  [clojure.spec.alpha$gen invokeStatic "alpha.clj" 296]
+  [clojure.spec.alpha$gen invoke "alpha.clj" 285]
+  [clojure.spec.test.alpha$quick_check$fn__3067 invoke "alpha.clj" 306]
+  [clojure.spec.test.alpha$quick_check invokeStatic "alpha.clj" 306]
+  [clojure.spec.test.alpha$quick_check invoke "alpha.clj" 303]
+  [clojure.spec.test.alpha$check_1 invokeStatic "alpha.clj" 336]
+  [clojure.spec.test.alpha$check_1 invoke "alpha.clj" 324]
+  [clojure.spec.test.alpha$check$fn__3088 invoke "alpha.clj" 412]
+  [clojure.core$pmap$fn__8462$fn__8463 invoke "core.clj" 7022]
+  [clojure.core$binding_conveyor_fn$fn__5754 invoke "core.clj" 2030]
+  [clojure.lang.AFn call "AFn.java" 18]
+  [java.util.concurrent.FutureTask run "FutureTask.java" 264]
+  [java.util.concurrent.ThreadPoolExecutor runWorker "ThreadPoolExecutor.java" 1128]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run "ThreadPoolExecutor.java" 628]
+  [java.lang.Thread run "Thread.java" 829]]}})
+clj꞉clojure-in-action.spec꞉> 
+"The best selling book  by "
+clj꞉clojure-in-action.spec꞉> 
+; Execution error (ArityException) at clojure-in-action.spec/eval8797 (form-init4313397792528964358.clj:190).
+; Wrong number of args (2) passed to: clojure-in-action.spec/book-blurb
+clj꞉clojure-in-action.spec꞉> 
+"The best selling book  by "
+clj꞉clojure-in-action.spec꞉> 
+"The best selling book  by "
+clj꞉clojure-in-action.spec꞉> 
